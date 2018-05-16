@@ -127,12 +127,17 @@ public class Skimmer {
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
 			pro.setHasURL(true);
-			System.out.println("fuck");
         } catch (IOException e) {
 			e.printStackTrace();
 		}
-		pro.setName(p.split("-")[0].substring(0, 1).toUpperCase() + p.split("-")[0].substring(1) + " " + 
+		
+		// Begin: Name
+		if(p.split("-").length < 3) pro.setName(p.split("-")[0].substring(0, 1).toUpperCase() + p.split("-")[0].substring(1) + " " + 
 					p.split("-")[1].substring(0, 1).toUpperCase() + p.split("-")[1].substring(1));
+		else pro.setName(p.split("-")[0].substring(0, 1).toUpperCase() + p.split("-")[0].substring(1) + " " + 
+				p.split("-")[1].substring(0, 1).toUpperCase() + p.split("-")[1].substring(1) + "-" + p.split("-")[2]);
+		// End: Name
+		
 		return pro;
 	}
 
