@@ -16,8 +16,8 @@ public class Skimmer {
 	private File inputFile = new File("assets/ProfileNames.txt");
 
 	// Url parts.
-	public String urlBase = "https://www.csupueblo.edu/profile/";
-	public String urlEnd = "/index.html";
+	public static String urlBase = "https://www.csupueblo.edu/profile/";
+	public static String urlEnd = "/index.html";
 	
 	public String startStaffInfo = "<!-- START: Staff Info -->";
 	public String endStaffInfo = "<!-- END: Staff Info -->";
@@ -113,7 +113,6 @@ public class Skimmer {
 		            
 		            // Begin: URL
 		            pro.setUrl(urlBase + p + urlEnd);
-		            pro.setHasURL(true);
 		            // End: URL
 		            
 		            // Begin: Picture
@@ -127,7 +126,8 @@ public class Skimmer {
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
-			pro.setHasURL(false);
+			pro.setHasURL(true);
+			System.out.println("fuck");
         } catch (IOException e) {
 			e.printStackTrace();
 		}

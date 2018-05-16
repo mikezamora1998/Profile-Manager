@@ -1,34 +1,14 @@
-import java.io.File;
-
 public class Profile{
-	
-	private File inputFile = new File("assets/ProfileNames.txt");
-
-	// Url parts.
-	public String urlBase = "https://www.csupueblo.edu/profile/";
-	public String urlEnd = "/index.html";
-	
-	public String startStaffInfo = "<!-- START: Staff Info -->";
-	public String endStaffInfo = "<!-- END: Staff Info -->";
-
-	// Placeholder images.
-	private String noImg1 = "pro-no-image-226x300.jpg";
-	private String noImg2 = "pro-female-blank-226x300.jpg";
-	private String noImg3 = "pro-male-blank-226x300.jpg";
-	private String noImg4 = "pro-profile-contact-us-226x300.jpg";
-
-	// Element strings.
-	private String phoneHTML = "<div class=\"phone\">";
-	private String emailHTML = "<div class=\"email\">";
 	
 	public Profile(){
 		name = "FirstName LastName";
 		phone = "###.###.####";
 		email = "xx.xxxxx@csupueblu.edu";
-		url = urlBase + "firstName-lastName" + urlEnd; 
+		url = Skimmer.urlBase + "firstName-lastName" + Skimmer.urlEnd; 
 		hasPhone = false;
 		hasEmail = false;
 		hasURL = false;
+		hasPicture = false;
 	}
 	
 	public String toString(){

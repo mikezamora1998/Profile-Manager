@@ -22,9 +22,9 @@ public class Main implements Runnable {
 
 	@Override
 	public void run() { 
-		GUI gui = new GUI();
+		//GUI gui = new GUI();
 		Skimmer skim = new Skimmer();
-		//CSVWriter csv = new CSVWriter(skim.getInfoList());
+		CSVWriter csv = new CSVWriter(skim.getInfoList());
 		//System.out.println("hello");
 	}
 }
